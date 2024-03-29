@@ -24,10 +24,10 @@ echo '<div class="nav">';
 echo '<div class="container">';
 echo '<div class="row align-items-center">';
 
-echo '<div class="col-lg-4 col-md-4 col-3 text-center">';
+echo '<div class="col-4 col-3 text-center">';
 
 echo '<a href="' . home_url() . '">';
-echo '<div style="width:75px;">';
+echo '<div style="width:125px;">';
 echo logoSVG();
 echo '</div>';
 echo '</a>';
@@ -35,7 +35,7 @@ echo '</div>';
 
 // echo '<div class="col-1 mobile-hidden"></div>';
 
-echo '<div class="col-lg-4 col-6 text-center mobile-hidden">';
+echo '<div class="col-8 text-center">';
 
 wp_nav_menu(array(
     'menu' => 'primary',
@@ -49,34 +49,34 @@ echo '</div>';
 
 // echo '</div>';
 
-echo '<div class="col-lg-3 col-md-2 col-3 desktop-hidden">';
-echo '<a id="navToggle" class="nav-toggle">';
-echo '<div>';
-echo '<div class="line-1 bg-accent-secondary"></div>';
-echo '<div class="line-2 bg-accent-secondary"></div>';
-echo '<div class="line-3 bg-accent-secondary"></div>';
-echo '</div>';
-echo '</a>';
-echo '</div>';
+// echo '<div class="col-lg-3 col-md-2 col-3 desktop-hidden">';
+// echo '<a id="navToggle" class="nav-toggle">';
+// echo '<div>';
+// echo '<div class="line-1 bg-accent-secondary"></div>';
+// echo '<div class="line-2 bg-accent-secondary"></div>';
+// echo '<div class="line-3 bg-accent-secondary"></div>';
+// echo '</div>';
+// echo '</a>';
+// echo '</div>';
 
-echo '<div id="navMenuOverlay" class="position-fixed z-2"></div>';
-echo '<div class="col-lg-4 col-md-8 col-11 nav-items bg-accent desktop-hidden" id="navItems">';
+// echo '<div id="navMenuOverlay" class="position-fixed z-2"></div>';
+// echo '<div class="col-lg-4 col-md-8 col-11 nav-items bg-accent desktop-hidden" id="navItems">';
 
-echo '<div class="pt-5 pb-5">';
-echo '<div class="close-menu">';
-echo '<div>';
-echo '<span id="navMenuClose" class="close h2 text-white" style="float:right;">X</span>';
-echo '</div>';
-echo '</div>';
-echo '<a href="' . home_url() . '">';
-echo logoSVG();
-echo '</a>';
-echo '</div>';
-wp_nav_menu(array(
-'menu' => 'primary',
-'menu_class'=>'menu list-unstyled mb-0'
-)); 
-echo '</div>'; // end of col for navigation
+// echo '<div class="pt-5 pb-5">';
+// echo '<div class="close-menu">';
+// echo '<div>';
+// echo '<span id="navMenuClose" class="close h2 text-white" style="float:right;">X</span>';
+// echo '</div>';
+// echo '</div>';
+// echo '<a href="' . home_url() . '">';
+// echo logoSVG();
+// echo '</a>';
+// echo '</div>';
+// wp_nav_menu(array(
+// 'menu' => 'primary',
+// 'menu_class'=>'menu list-unstyled mb-0'
+// )); 
+// echo '</div>'; // end of col for navigation
 
 
 

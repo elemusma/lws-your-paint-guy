@@ -13,10 +13,11 @@ a.btn-main, ul.menu > li.btn-main a {
     margin: 10px 0;
 }
 
-.btn-main:hover {
+a.btn-main:hover, ul.menu > li.btn-main a:hover {
     background: var(--accent-secondary-hover);
     border-color:var(--accent-secondary-hover);
     text-decoration: none;
+    /* color:white!important; */
 }
 
 .btn-main.outline {

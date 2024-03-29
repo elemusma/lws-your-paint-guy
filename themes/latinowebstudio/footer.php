@@ -10,10 +10,10 @@ echo '<div class="container">';
 // echo '</div>';
 // echo '</div>';
 
-echo '<div class="row">';
+echo '<div class="row justify-content-center">';
 
-echo '<div class="col-lg-3 text-white">';
-echo '<a href="' . home_url() . '">';
+echo '<div class="col-lg-3 text-white text-center">';
+echo '<a href="' . home_url() . '" style="display: inline-block;">';
 echo '<div style="width:125px;">';
 echo logoSVG();
 echo '</div>';
@@ -22,24 +22,24 @@ echo '</a>';
 echo '<p class="">' . companyAbout() . '</p>';
 
 echo '</div>';
-echo '<div class="col-lg-3 text-white">';
-echo '<strong>Navigation</strong>';
-echo '<p>';
-wp_nav_menu(array(
-    'menu' => 'footer',
-    'menu_class'=>'menu list-unstyled text-white text-uppercase mt-0'
-    ));
+// echo '<div class="col-lg-3 text-white">';
+// echo '<strong>Navigation</strong>';
+// echo '<p>';
+// wp_nav_menu(array(
+//     'menu' => 'footer',
+//     'menu_class'=>'menu list-unstyled text-white text-uppercase mt-0'
+//     ));
 
-echo '</div>';
-echo '<div class="col-lg-3 text-white">';
-echo '<strong>Shop</strong>';
-echo '<p>';
-wp_nav_menu(array(
-    'menu' => 'Product Categories',
-    'menu_class'=>'menu list-unstyled text-white text-uppercase mt-0'
-    ));
+// echo '</div>';
+// echo '<div class="col-lg-3 text-white">';
+// echo '<strong>Shop</strong>';
+// echo '<p>';
+// wp_nav_menu(array(
+//     'menu' => 'Product Categories',
+//     'menu_class'=>'menu list-unstyled text-white text-uppercase mt-0'
+//     ));
 
-echo '</div>';
+// echo '</div>';
 echo '</div>';
 echo '</div>';
 echo '</section>';
