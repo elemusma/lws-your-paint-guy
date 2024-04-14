@@ -1,12 +1,13 @@
 let menuHeight = document.querySelector('ul#menu-main-menu');
-let navMenu = document.querySelector('#navItems');
-let navMenuToggle = document.querySelector('#navToggle');
-let navMenuOverlay = document.querySelector('#navMenuOverlay');
-let navMenuClose = document.querySelector('#navMenuClose');
+
+// let navMenu = document.querySelector('#mobileMenu');
+// let navMenuToggle = document.querySelector('#mobileMenuToggle');
+// let navMenuOverlay = document.querySelector('#navMenuOverlay');
+// let navMenuClose = document.querySelector('#navMenuClose');
 let header = document.querySelector('header');
 let blankSpace = document.querySelector('.blank-space');
 
-let logoMain = document.querySelector('#logo-main')
+let logoMain = document.querySelector('#logoMain')
 let logoSecondary = document.querySelector('#logo-secondary')
 
 window.addEventListener("scroll", parallaxEffect);
@@ -16,39 +17,39 @@ function parallaxEffect() {
     header.classList.add('position-fixed');
     header.classList.remove('position-relative');
 
-    // if (scrollY < 299) {
-    //     logoMain.style.width = "275px"
-    // } else if (scrollY > 300) {
-    //     logoMain.style.width = "205px"
-    // }
+    if (scrollY < 299) {
+        logoMain.style.width = "105px"
+    } else if (scrollY > 300) {
+        logoMain.style.width = "75px"
+    }
 }
 
 // closes menu on menu item clicked, for anchor links
 let menuItems = document.querySelectorAll('.menu-item');
 
-for (i = 0; i < menuItems.length; i++) {
-    menuItems[i].addEventListener('click', closeMenu);
-}
+// for (i = 0; i < menuItems.length; i++) {
+//     menuItems[i].addEventListener('click', closeMenu);
+// }
 // ###################################################
 
-navMenuClose.addEventListener('click', closeMenu);
-navMenuOverlay.addEventListener('click', closeMenu);
-navMenuToggle.addEventListener('click', openMenu);
+// navMenuClose.addEventListener('click', closeMenu);
+// navMenu.addEventListener('click', closeMenu);
+// navMenuToggle.addEventListener('click', openMenu);
 
 function openMenu() {
-    setTimeout(function () {
-        navMenu.classList.add('activate');
-    }, 500);
+    // setTimeout(function () {
+    //     navMenu.classList.add('activate');
+    // }, 500);
     navMenuToggle.classList.add('activate');
-    navMenuOverlay.classList.add('activate');
+    // navMenuOverlay.classList.add('activate');
 }
 
 function closeMenu() {
-    navMenu.classList.remove('activate');
+    // navMenu.classList.remove('activate');
     navMenuToggle.classList.remove('activate');
-    setTimeout(function () {
-        navMenuOverlay.classList.remove('activate');
-    }, 500);
+    // setTimeout(function () {
+    //     navMenuOverlay.classList.remove('activate');
+    // }, 500);
 }
 
 // $('#navToggle').click(function(event) {

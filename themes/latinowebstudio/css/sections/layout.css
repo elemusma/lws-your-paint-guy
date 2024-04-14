@@ -1175,3 +1175,15 @@ body {
     list-style: none;
     padding: 0;
 }
+
+@media screen and (max-width: 1199px) {
+    .mobile-hidden {
+      display: none !important;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .desktop-hidden {
+      display: none !important;
+    }
+  }
