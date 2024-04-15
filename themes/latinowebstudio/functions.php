@@ -179,6 +179,8 @@ $a = shortcode_atts( array(
 
 'target' => '',
 
+'title' => '',
+
 'id' => '',
 
 'aria-label' => ''
@@ -191,7 +193,7 @@ $id = esc_attr($a['id']);
 if (strpos($id, 'modal') !== false) {
 	return '<span class="btn-main ' . esc_attr($a['class']) . '" aria-label="' . esc_attr($a['aria-label']) . '" style="' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '" id="' . esc_attr($a['id']) . '">' . $content . '</span>';
 } else {
-	return '<a class="btn-main ' . esc_attr($a['class']) . '" href="' . esc_attr($a['href']) . '" style="' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '" id="' . esc_attr($a['id']) . '">' . $content . '</a>';
+	return '<a class="btn-main ' . esc_attr($a['class']) . '" href="' . esc_attr($a['href']) . '" style="' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '" id="' . esc_attr($a['id']) . '" title="' . esc_attr($a['title']) . '">' . $content . '</a>';
 }
 
 // [button href="#" class="btn-main" style=""]Learn More[/button]

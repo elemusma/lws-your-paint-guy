@@ -13,7 +13,7 @@ echo '<div class="container">';
 echo '<div class="row justify-content-start">';
 
 echo '<div class="col-lg-2 text-white text-center">';
-echo '<a href="' . home_url() . '" style="display: inline-block;">';
+echo '<a href="' . home_url() . '" style="display: inline-block;" title="Your Paint Guy Handyman in Merrimack & Southern Hampshire">';
 echo '<div style="width:125px;pointer-events:none;">';
 echo logoSVG();
 echo '</div>';
@@ -37,7 +37,7 @@ echo '</div>';
 
 echo '<div>';
 // echo '<p class="text-gray" style="margin:0;"><strong>Call</strong></p>';
-echo '<a href="tel:+1' . phoneNumber() . '" class="">' . phoneNumber() . '</a>';
+echo '<a href="tel:+1' . phoneNumber() . '" class="" title="phone number link">' . phoneNumber() . '</a>';
 echo '</div>';
 
 echo '</div>'; // end of col
@@ -50,7 +50,7 @@ echo '</div>';
 
 echo '<div>';
 // echo '<p class="text-gray" style="margin:0;"><strong>Email</strong></p>';
-echo '<a href="mailto:' . emailAddress() . '" target="_blank" class="">' . emailAddress() . '</a>';
+echo '<a href="mailto:' . emailAddress() . '" target="_blank" class="" title="email link">' . emailAddress() . '</a>';
 echo '</div>';
 
 echo '</div>'; // end of col

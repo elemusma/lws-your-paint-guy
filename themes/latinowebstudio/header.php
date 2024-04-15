@@ -33,7 +33,7 @@ echo '</div>';
 
 echo '<div>';
 // echo '<p class="text-gray" style="margin:0;"><strong>Call</strong></p>';
-echo '<a href="tel:+1' . phoneNumber() . '" class="">' . phoneNumber() . '</a>';
+echo '<a href="tel:+1' . phoneNumber() . '" class="" title="phone number link">' . phoneNumber() . '</a>';
 echo '</div>';
 
 echo '</div>'; // end of col
@@ -46,7 +46,7 @@ echo '</div>';
 
 echo '<div>';
 // echo '<p class="text-gray" style="margin:0;"><strong>Email</strong></p>';
-echo '<a href="mailto:' . emailAddress() . '" target="_blank" class="">' . emailAddress() . '</a>';
+echo '<a href="mailto:' . emailAddress() . '" target="_blank" class="" title="email link">' . emailAddress() . '</a>';
 echo '</div>';
 
 echo '</div>'; // end of col
@@ -75,7 +75,7 @@ echo '<div class="row align-items-center">';
 
 echo '<div class="col-lg-1 col-3 text-center">';
 
-echo '<a href="' . home_url() . '">';
+echo '<a href="' . home_url() . '" title="Your Paint Guy Handyman in Merrimack & Southern Hampshire">';
 echo '<div style="width:140%;max-width:105px;transition:all .5s ease-in-out;pointer-events:none;" id="logoMain">';
 echo logoSVG();
 echo '</div>';
@@ -86,7 +86,7 @@ echo '</div>';
 
 
 echo '<div class="col-lg-3 col-md-6 col-3 desktop-hidden" style="transform: translate(20px, 0px);">';
-echo '<a id="mobileMenuToggle" class="openModalBtn nav-toggle" data-modal-id="mobileMenu">';
+echo '<a id="mobileMenuToggle" class="openModalBtn nav-toggle" data-modal-id="mobileMenu" title="mobile menu nav toggle">';
 echo '<div>';
 echo '<div class="line-1 bg-accent-secondary"></div>';
 echo '<div class="line-2 bg-accent-secondary"></div>';
@@ -127,7 +127,7 @@ echo '<span class="close" id="navMenuClose">&times;</span>';
 echo do_shortcode('[spacer style="height:25px;"]');
 
 echo '<div style="width:100%;max-width:105px;">';
-echo '<a href="' . home_url() . '">';
+echo '<a href="' . home_url() . '" title="Your Paint Guy Handyman in Merrimack & Southern Hampshire">';
 echo logoSVG();
 echo '</a>';
 echo '</div>';
@@ -145,7 +145,7 @@ echo '</div>';
 
 echo '<div>';
 echo '<p class="text-gray" style="margin:0;"><strong>Email</strong></p>';
-echo '<a href="mailto:' . emailAddress() . '" target="_blank" class="text-accent-secondary">' . emailAddress() . '</a>';
+echo '<a href="mailto:' . emailAddress() . '" target="_blank" class="text-accent-secondary" title="email link">' . emailAddress() . '</a>';
 echo '</div>';
 
 echo '</div>';
