@@ -76,7 +76,7 @@ echo '<div class="row align-items-center">';
 echo '<div class="col-lg-1 col-3 text-center">';
 
 echo '<a href="' . home_url() . '">';
-echo '<div style="width:105px;max-width:105px;transition:all .5s ease-in-out;" id="logoMain">';
+echo '<div style="width:140%;max-width:105px;transition:all .5s ease-in-out;pointer-events:none;" id="logoMain">';
 echo logoSVG();
 echo '</div>';
 echo '</a>';
@@ -85,7 +85,7 @@ echo '</div>';
 
 
 
-echo '<div class="col-lg-3 col-md-2 col-3 desktop-hidden">';
+echo '<div class="col-lg-3 col-md-6 col-3 desktop-hidden" style="transform: translate(20px, 0px);">';
 echo '<a id="mobileMenuToggle" class="openModalBtn nav-toggle" data-modal-id="mobileMenu">';
 echo '<div>';
 echo '<div class="line-1 bg-accent-secondary"></div>';
@@ -104,8 +104,8 @@ wp_nav_menu(array(
 
 echo '</div>'; // end of col
 
-echo '<div class="col-lg-2 col-4">';
-    echo do_shortcode('[button href="tel:+1' . phoneNumber() . '"]' . phoneNumber() . '[/button]');
+echo '<div class="col-lg-2 col-md-3 col-6 text-right">';
+    echo do_shortcode('[button href="tel:+1' . phoneNumber() . '"]CALL JAY[/button]');
     echo '</div>'; // end of col
 
 
@@ -123,6 +123,8 @@ echo '<div id="mobileMenu" class="modal mobile-menu">';
 //   <!-- Modal content -->
 echo '<div class="modal-content-menu modal-content">';
 echo '<span class="close" id="navMenuClose">&times;</span>';
+
+echo do_shortcode('[spacer style="height:25px;"]');
 
 echo '<div style="width:100%;max-width:105px;">';
 echo '<a href="' . home_url() . '">';
@@ -150,9 +152,9 @@ echo '</div>';
 
 echo do_shortcode('[spacer style="height:25px;"]');
 
-echo '<div class="d-flex align-items-center justify-content-center" style="">';
+echo '<div class="d-flex align-items-center justify-content-start" style="">';
 
-echo '<div style="border-radius:50%;height:40px;min-width:40px;margin-right:25px;" class="bg-white d-flex align-items-center justify-content-center">';
+echo '<div style="border-radius:50%;height:40px;min-width:40px;margin-right:10px;" class="bg-white d-flex align-items-center justify-content-center">';
 echo '<svg style="height:20px;" fill="var(--accent-primary)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>';
 echo '</div>';
 
@@ -165,7 +167,7 @@ echo '</div>';
 
 echo do_shortcode('[spacer style="height:25px;"]');
 
-echo do_shortcode('[button href="tel:+1' . phoneNumber() . '"]' . phoneNumber() . '[/button]');
+echo do_shortcode('[button href="tel:+1' . phoneNumber() . '"]Call Jay[/button]');
 
 echo '</div>';
 echo '</div>';

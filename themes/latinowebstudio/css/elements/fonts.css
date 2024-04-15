@@ -71,10 +71,10 @@ h1, .h1 {
   font-size: 3.5rem;
 }
 h2, .h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 h3, .h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 h4, .h4 {
   font-size: 2rem;
@@ -115,21 +115,21 @@ strong,b {
   position: relative;
   list-style: none;
   /* color: #a4a3a3; */
-  text-shadow:var(--text-shadow);
+  /* text-shadow:var(--text-shadow); */
   font-style: italic;
   font-family: 'poppinsbold';
 }
 
 .arrows li:before {
   content: "";
-  background: url('/wp-content/uploads/2024/03/icon-house.png');
+  background: url('/wp-content/uploads/2024/04/Checkmark-Gold.png');
   background-repeat: no-repeat;
   background-size: contain;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   position: absolute;
-  top: 0px;
-  left: -30px;
+  top: 5px;
+  left: -25px;
 }
 
 @media only screen and (max-width:991px) {

@@ -21,7 +21,8 @@ export default function save({attributes}) {
 	const blockProps = useBlockProps.save();
 	return (
 		<div {...blockProps}>
-		<section className={`position-relative ${attributes.section_class}`} style={`padding:50px 0;${attributes.section_style}`} id={attributes.section_id}>
+		<section className={`position-relative ${attributes.section_class}`} style={`padding:50px 0;${attributes.section_style}`}>
+		<div style={`position:absolute;top:-100px;`} id={attributes.section_id}></div>
 		{attributes.section_image && (
 			<img src={attributes.section_image} alt="" className={`w-100 h-100 position-absolute bg-img ${attributes.section_image_class}`} style={`top:0;left:0;object-fit:cover;pointer-events:none;${attributes.section_image_style}`} />
 		)}

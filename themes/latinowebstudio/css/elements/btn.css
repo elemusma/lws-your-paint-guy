@@ -4,15 +4,23 @@ a.btn-main, ul.menu > li.btn-main a {
     transition: all .25s ease-in-out;
     display: inline-block;
     text-decoration: none;
-    color: white;
+    color: black;
     text-shadow:none;
     border-radius: 25px;
     text-transform: uppercase;
     border:1px solid var(--accent-secondary);
     font-family: 'poppinssemibold';
-    margin: 10px 0;
+    margin: 10px;
 }
 
+a.btn-main.white {
+    background: var(--light);
+    border-color:var(--light);
+}
+a.btn-main.white:hover {
+    background: white;
+    border-color:white;
+}
 a.btn-main:hover, ul.menu > li.btn-main a:hover {
     background: var(--accent-secondary-hover);
     border-color:var(--accent-secondary-hover);

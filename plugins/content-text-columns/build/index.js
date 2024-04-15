@@ -82,9 +82,12 @@ function Edit({
   const addColumn = () => {
     setAttributes({
       columns: [...columns, {
-        col_class: 'col-lg-4 col-md-6',
-        col_style: '',
+        col_class: 'col-lg-4 col-md-6 text-center',
+        col_style: 'padding:20px 0px 15px;',
         col_id: '',
+        data_aos: 'fade-up',
+        data_aos_delay: '',
+        data_aos_offset: '',
         title: 'Title'
       }]
     });
@@ -277,6 +280,46 @@ function Edit({
       onChange: content => updateColumn(index, 'col_id', content.target.value)
     }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       style: {
+        display: 'flex'
+      }
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
+        paddingRight: '25px'
+      }
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      style: {
+        marginBottom: '0px'
+      }
+    }, "Data AOS"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      value: column.data_aos,
+      onChange: content => updateColumn(index, 'data_aos', content.target.value)
+    })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
+        paddingRight: '25px'
+      }
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      style: {
+        marginBottom: '0px'
+      }
+    }, "Data AOS Delay"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      value: column.data_aos_delay,
+      onChange: content => updateColumn(index, 'data_aos_delay', content.target.value)
+    })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
+        paddingRight: '25px'
+      }
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      style: {
+        marginBottom: '0px'
+      }
+    }, "Data AOS Offset"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      value: column.data_aos_offset,
+      onChange: content => updateColumn(index, 'data_aos_offset', content.target.value)
+    }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
         display: 'flex',
         paddingTop: '25px'
       }
@@ -427,7 +470,7 @@ function save({
     ...blockProps
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: `position-relative ${attributes.section_class}`,
-    style: `padding:50px 0;${attributes.section_style}`,
+    style: `${attributes.section_style}`,
     id: attributes.section_id
   }, attributes.section_image && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: attributes.section_image,
@@ -445,8 +488,13 @@ function save({
   }, attributes.columns.map((column, index) => {
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: `${column.col_class}`,
-      style: column.col_style
-    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+      style: column.col_style,
+      "data-aos": column.data_aos,
+      "data-aos-delay": column.data_aos_delay,
+      "data-aos-offset": column.data_aos_offset
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+      style: `font-size:27px;`
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
       value: column.title
     })));
   })))));
@@ -544,7 +592,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/content-text-columns","version":"0.1.0","title":"Content Text Columns","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"section_style":{"type":"string","default":""},"section_class":{"type":"string","default":""},"section_id":{"type":"string","default":""},"section_image":{"type":"string","default":null},"section_image_class":{"type":"string"},"section_image_style":{"type":"string"},"section_block":{"type":"string","default":""},"container_style":{"type":"string","default":""},"container_class":{"type":"string","default":"container"},"container_id":{"type":"string","default":""},"row_style":{"type":"string","default":""},"row_class":{"type":"string","default":"row justify-content-center"},"row_id":{"type":"string","default":""},"columns":{"type":"array","items":{"type":"object"},"default":[{"col_class":"","col_style":"","col_id":"","title":""}]}},"textdomain":"content-text-columns","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/content-text-columns","version":"0.1.0","title":"Content Text Columns","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"section_style":{"type":"string","default":""},"section_class":{"type":"string","default":""},"section_id":{"type":"string","default":""},"section_image":{"type":"string","default":null},"section_image_class":{"type":"string"},"section_image_style":{"type":"string"},"section_block":{"type":"string","default":""},"container_style":{"type":"string","default":""},"container_class":{"type":"string","default":"container-fluid"},"container_id":{"type":"string","default":""},"row_style":{"type":"string","default":""},"row_class":{"type":"string","default":"row justify-content-center"},"row_id":{"type":"string","default":""},"columns":{"type":"array","items":{"type":"object"},"default":[{"col_class":"","col_style":"","col_id":"","title":""}]}},"textdomain":"content-text-columns","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

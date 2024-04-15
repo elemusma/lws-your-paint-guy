@@ -350,9 +350,11 @@ function save({
     ...blockProps
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: `position-relative ${attributes.section_class}`,
-    style: `padding:50px 0;${attributes.section_style}`,
+    style: `padding:50px 0;${attributes.section_style}`
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    style: `position:absolute;top:-100px;`,
     id: attributes.section_id
-  }, attributes.section_image && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+  }), attributes.section_image && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: attributes.section_image,
     alt: "",
     className: `w-100 h-100 position-absolute bg-img ${attributes.section_image_class}`,

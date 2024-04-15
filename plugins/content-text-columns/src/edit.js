@@ -70,9 +70,12 @@ export default function Edit( { attributes, setAttributes } ) {
 			columns: [
 				...columns,
 				{
-					col_class: 'col-lg-4 col-md-6',
-					col_style: '',
+					col_class: 'col-lg-4 col-md-6 text-center',
+					col_style: 'padding:20px 0px 15px;',
 					col_id: '',
+					data_aos:'fade-up',
+					data_aos_delay:'',
+					data_aos_offset:'',
 					title: 'Title'
 				},
 			],
@@ -307,6 +310,56 @@ export default function Edit( { attributes, setAttributes } ) {
 										updateColumn(
 											index,
 											'col_id',
+											content.target.value
+										)
+									}
+								/>
+								</div>
+								</div>
+								<div style={{display:'flex'}}>
+								<div style={{paddingRight:'25px'}}>
+								<p style={ { marginBottom: '0px' } }>
+									Data AOS
+								</p>
+								<input
+									type="text"
+									value={ column.data_aos }
+									onChange={ ( content ) =>
+										updateColumn(
+											index,
+											'data_aos',
+											content.target.value
+										)
+									}
+								/>
+								</div>
+								<div style={{paddingRight:'25px'}}>
+								<p style={ { marginBottom: '0px' } }>
+									Data AOS Delay
+								</p>
+								<input
+									type="text"
+									value={ column.data_aos_delay }
+									onChange={ ( content ) =>
+										updateColumn(
+											index,
+											'data_aos_delay',
+											content.target.value
+										)
+									}
+								/>
+								</div>
+								<div style={{paddingRight:'25px'}}>
+								<p style={ { marginBottom: '0px' } }>
+									Data AOS Offset
+								</p>
+								<input
+									type="text"
+									value={ column.data_aos_offset }
+									onChange={ ( content ) =>
+										updateColumn(
+											index,
+											'data_aos_offset',
 											content.target.value
 										)
 									}

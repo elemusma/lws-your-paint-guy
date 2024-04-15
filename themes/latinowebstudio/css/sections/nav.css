@@ -132,6 +132,7 @@ div#mobileMenu .modal-content {
         height: 5px;
         width: 55px;
         margin: 4px auto;
+        margin-right: 0;
         transition: all .75s ease-in-out;
     }
 

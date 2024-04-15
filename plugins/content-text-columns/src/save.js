@@ -23,7 +23,7 @@ export default function save( { attributes } ) {
 		<div { ...blockProps }>
 			<section
 				className={ `position-relative ${ attributes.section_class }` }
-				style={ `padding:50px 0;${ attributes.section_style }` }
+				style={ `${ attributes.section_style }` }
 				id={ attributes.section_id }
 			>
 				{ attributes.section_image && (
@@ -49,8 +49,8 @@ export default function save( { attributes } ) {
 					>
 					{ attributes.columns.map( ( column, index ) => {
 						return (
-							<div className={ `${ column.col_class }` } style={column.col_style}>
-								<h3><RichText.Content value={ column.title } /></h3>
+							<div className={ `${ column.col_class }` } style={column.col_style} data-aos={column.data_aos} data-aos-delay={column.data_aos_delay} data-aos-offset={column.data_aos_offset}>
+								<h3 style={`font-size:27px;`}><RichText.Content value={ column.title } /></h3>
 							</div>
 						);
 					} ) }
