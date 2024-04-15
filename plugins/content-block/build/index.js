@@ -395,12 +395,12 @@ function save({
   }), attributes.section_image && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: attributes.section_image,
     alt: "",
-    className: `w-100 h-100 position-absolute bg-img d-md-block d-none ${attributes.section_image_class}`,
+    className: `w-100 h-100 position-absolute bg-img ${attributes.section_image_class}`,
     style: `top:0;left:0;object-fit:cover;pointer-events:none;${attributes.section_image_style}`
   }), attributes.section_image_mobile && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: attributes.section_image_mobile,
     alt: "",
-    className: `w-100 h-100 position-absolute bg-img d-md-none d-block ${attributes.section_image_mobile_class}`,
+    className: `w-100 h-100 position-absolute bg-img ${attributes.section_image_mobile_class}`,
     style: `top:0;left:0;object-fit:cover;pointer-events:none;${attributes.section_image_mobile_style}`
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.RawHTML, null, attributes.section_block), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: attributes.container_class,
