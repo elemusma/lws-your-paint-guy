@@ -77,7 +77,13 @@ echo '<div class="col-lg-1 col-3 text-center">';
 
 echo '<a href="' . home_url() . '" title="Your Paint Guy Handyman in Merrimack & Southern Hampshire">';
 echo '<div style="width:140%;max-width:105px;transition:all .5s ease-in-out;pointer-events:none;" id="logoMain">';
-echo logoSVG();
+
+// echo logoImg()['id'];
+echo wp_get_attachment_image(logoImg()['id'],'full','',[
+    'class'=>'w-100 h-auto',
+
+]);
+// echo logoSVG();
 echo '</div>';
 echo '</a>';
 

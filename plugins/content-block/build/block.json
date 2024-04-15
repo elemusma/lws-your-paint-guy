@@ -34,6 +34,16 @@
     "section_image_style": {
       "type": "string"
     },
+    "section_image_mobile": {
+      "type": "string",
+      "default": null
+    },
+    "section_image_mobile_class": {
+      "type": "string"
+    },
+    "section_image_mobile_style": {
+      "type": "string"
+    },
     "section_block": {
       "type": "string",
       "default": ""

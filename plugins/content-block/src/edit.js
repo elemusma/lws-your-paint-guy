@@ -32,7 +32,7 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 export default function Edit({ attributes, setAttributes }) {
-	const { section_style, section_class, section_id, section_image, section_image_class, section_image_style, section_block, container_style, container_class, container_id, row_style, row_class, row_id, col_style, col_class, col_id, col_data_aos, col_data_aos_delay } = attributes;
+	const { section_style, section_class, section_id, section_image, section_image_mobile, section_image_mobile_class, section_image_mobile_style, section_image_class, section_image_style, section_block, container_style, container_class, container_id, row_style, row_class, row_id, col_style, col_class, col_id, col_data_aos, col_data_aos_delay } = attributes;
 
 	const [value, setValue] = useState('');
 	return (
@@ -87,7 +87,7 @@ export default function Edit({ attributes, setAttributes }) {
   />
 </MediaUploadCheck>
 
-					<InputControl
+<InputControl
 						label="Background Image Class"
 						value={section_image_class}
 						onChange={(nextValue) => setAttributes({ section_image_class: nextValue })}
@@ -96,6 +96,46 @@ export default function Edit({ attributes, setAttributes }) {
 						label="Background Image Style"
 						value={section_image_style}
 						onChange={(nextValue) => setAttributes({ section_image_style: nextValue })}
+					/>
+
+				<MediaUploadCheck>
+  <MediaUpload
+    onSelect={(media) => setAttributes({ section_image_mobile: media.url })}
+    type="image"
+    allowedTypes={['image']}
+    value={section_image_mobile}
+    render={({ open }) => (
+      <div>
+        {section_image_mobile && (
+          <Button
+            isLink
+            isDestructive
+            onClick={() => setAttributes({ section_image_mobile: '' })}
+          >
+            {__('Remove Section Image for Mobile')}
+          </Button>
+        )}
+        <Button
+          onClick={open}
+          icon="upload"
+          className="editor-media-placeholder__button is-button is-default is-large"
+        >
+          {__('Select Section Image for Mobile')}
+        </Button>
+      </div>
+    )}
+  />
+</MediaUploadCheck>
+
+					<InputControl
+						label="Background Image Class for Mobile"
+						value={section_image_mobile_class}
+						onChange={(nextValue) => setAttributes({ section_image_mobile_class: nextValue })}
+					/>
+					<InputControl
+						label="Background Image Style for Mobile"
+						value={section_image_mobile_style}
+						onChange={(nextValue) => setAttributes({ section_image_mobile_style: nextValue })}
 					/>
 				</PanelBody>
 				<PanelBody title={__('Code Block')} initialOpen={false}>
@@ -177,6 +217,7 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 			<section {...useBlockProps()}>
 				<img src={section_image} alt="" />
+				<img src={section_image_mobile} alt="" />
 				{console.log(section_image)}
 			<InnerBlocks />
 			</section>
