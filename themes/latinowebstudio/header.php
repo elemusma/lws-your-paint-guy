@@ -81,7 +81,6 @@ echo '<div style="width:140%;max-width:105px;transition:all .5s ease-in-out;poin
 // echo logoImg()['id'];
 echo wp_get_attachment_image(logoImg()['id'],'full','',[
     'class'=>'w-100 h-auto',
-
 ]);
 // echo logoSVG();
 echo '</div>';
@@ -134,7 +133,10 @@ echo do_shortcode('[spacer style="height:25px;"]');
 
 echo '<div style="width:100%;max-width:105px;">';
 echo '<a href="' . home_url() . '" title="Your Paint Guy Handyman in Merrimack & Southern Hampshire">';
-echo logoSVG();
+echo wp_get_attachment_image(logoImg()['id'],'full','',[
+    'class'=>'w-100 h-auto',
+]);
+// echo logoSVG();
 echo '</a>';
 echo '</div>';
 
