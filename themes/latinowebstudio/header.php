@@ -105,7 +105,7 @@ wp_nav_menu(array(
 echo '</div>'; // end of col
 
 echo '<div class="col-lg-2 col-md-3 col-6 text-right">';
-    echo do_shortcode('[button href="tel:+1' . phoneNumber() . '"]CALL JAY[/button]');
+    echo do_shortcode('[button href="tel:+1' . phoneNumber() . '" title="phone number to call Jay"]CALL JAY[/button]');
     echo '</div>'; // end of col
 
 
@@ -167,7 +167,7 @@ echo '</div>';
 
 echo do_shortcode('[spacer style="height:25px;"]');
 
-echo do_shortcode('[button href="tel:+1' . phoneNumber() . '"]Call Jay[/button]');
+echo do_shortcode('[button href="tel:+1' . phoneNumber() . '" title="phone number to call Jay"]Call Jay[/button]');
 
 echo '</div>';
 echo '</div>';
